@@ -1,1 +1,1 @@
-web: python spotify-api.py
+python spotify-api.py
