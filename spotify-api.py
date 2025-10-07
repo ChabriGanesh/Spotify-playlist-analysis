@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from flask import Flask, request, jsonify, render_template_string
 # ---- Data Loading & Preprocessing ----
-df = pd.read_csv('spotify_dataset.csv', on_bad_lines='skip')
+df = pd.read_csv('spotify_dataset_sample.csv', on_bad_lines='skip')
 df.columns = df.columns.str.strip().str.replace('"', '')
 df = df.drop_duplicates()
 df = df.dropna(subset=['artistname', 'trackname', 'playlistname'])
